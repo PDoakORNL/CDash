@@ -2693,6 +2693,11 @@ class Build
         return $this->TestCollection;
     }
 
+    public function GetSummaryUrl()
+    {
+        // TODO: create method
+    }
+
     /**
      * @return Project
      */

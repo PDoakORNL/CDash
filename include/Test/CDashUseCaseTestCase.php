@@ -9,6 +9,12 @@ class CDashUseCaseTestCase extends CDashTestCase
     /** @var  ServiceContainer $originalServiceContainer */
     private static $originalServiceContainer;
 
+    public static function tearDownAfterClass()
+    {
+        ServiceContainer::setInstance(ServiceContainer::class, self::$originalServiceContainer);
+        parent::tearDownAfterClass();
+    }
+
     public function setUseCaseModelFactory(UseCase $useCase)
     {
         self::$originalServiceContainer = ServiceContainer::getInstance();
