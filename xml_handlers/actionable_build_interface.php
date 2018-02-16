@@ -9,5 +9,9 @@ interface ActionableBuildInterface
      * @return Build[]
      */
     public function getActionableBuilds();
-    public function getProjectId();
+
+    /**
+     * @return Project
+     */
+    public function GetProject();
 }
