@@ -27,7 +27,7 @@ class ServiceContainer extends Singleton
 
     public function create($class_name)
     {
-        return $this->container->get($class_name);
+        return $this->container->make($class_name);
     }
 
     public function setContainer(Container $container)
