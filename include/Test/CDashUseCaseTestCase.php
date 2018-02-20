@@ -29,6 +29,7 @@ class CDashUseCaseTestCase extends CDashTestCase
             $model = $this->getMockBuilder(\Project::class)
                 ->setMethods(['Save'])
                 ->getMock();
+            $model->Name = 'CDashUseCaseProject';
             return $model;
         })->scope(DI\Scope::PROTOTYPE));
 
